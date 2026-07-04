@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>נהניתם? ספרו לחברים | Yamato Travel</title>
+
+<meta property="og:title" content="נהניתם מהטיול? נשמח להמלצה 🌸 | Yamato Travel">
+<meta property="og:description" content="המלצה קטנה שלכם עוזרת לנו מאוד לגדול. כל הפרטים והקישורים כאן בדף אחד.">
+<meta property="og:image" content="https://yamato-travel.github.io/klook-landing/FUJI%20DAY%20TOUR.webp">
+<meta property="og:url" content="https://yamato-travel.github.io/recommend/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="נהניתם מהטיול? נשמח להמלצה 🌸 | Yamato Travel">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --plum:#3b1f3a;
+  --plum-deep:#2a1529;
+  --beige:#f5f0e8;
+  --beige-soft:#fbf8f3;
+  --sakura:#e8a5b3;
+  --sakura-deep:#c9748a;
+  --gold:#c9a05a;
+  --ink:#332433;
+  --fb:#1877F2;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Assistant',sans-serif;
+  background:var(--beige);
+  color:var(--ink);
+  line-height:1.7;
+}
+
+/* ---------- HERO ---------- */
+.hero{
+  background:linear-gradient(160deg,var(--plum) 0%,var(--plum-deep) 100%);
+  color:var(--beige);
+  text-align:center;
+  padding:52px 24px 88px;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:radial-gradient(circle at 15% 25%, rgba(232,165,179,.12) 0, transparent 32%),
+                   radial-gradient(circle at 85% 70%, rgba(201,160,90,.10) 0, transparent 30%);
+  pointer-events:none;
+}
+.logo-wrap{position:relative;display:inline-block;margin-bottom:26px}
+.logo-wrap img{
+  max-width:210px;
+  width:60%;
+  min-width:160px;
+  background:var(--beige);
+  padding:14px 22px;
+  border-radius:14px;
+  box-shadow:0 8px 28px rgba(0,0,0,.35);
+}
+.logo-fallback{
+  display:none;
+  font-family:'Frank Ruhl Libre',serif;
+  font-size:1.7rem;
+  font-weight:900;
+  letter-spacing:.06em;
+  color:var(--beige);
+  border:2px solid var(--gold);
+  border-radius:12px;
+  padding:12px 28px;
+}
+.jp-accent{
+  font-size:.95rem;
+  letter-spacing:.45em;
+  color:var(--sakura);
+  margin-bottom:14px;
+  position:relative;
+}
+.jp-romaji{
+  font-size:.8rem;
+  letter-spacing:.22em;
+  color:rgba(232,165,179,.75);
+  margin:-8px 0 16px;
+  position:relative;
+}
+.hero h1{
+  font-family:'Frank Ruhl Libre',serif;
+  font-weight:900;
+  font-size:clamp(1.9rem,6vw,2.9rem);
+  line-height:1.25;
+  position:relative;
+}
+.hero p.sub{
+  max-width:560px;
+  margin:18px auto 0;
+  font-size:1.1rem;
+  color:#e9ddea;
+  position:relative;
+}
+.hero p.sub strong{color:var(--sakura)}
+
+/* wave divider */
+.wave{display:block;width:100%;margin-top:-1px;background:var(--plum-deep)}
+.wave svg{display:block;width:100%;height:56px}
+
+/* ---------- CARDS ---------- */
+.cards{
+  max-width:680px;
+  margin:-52px auto 0;
+  padding:0 20px 10px;
+  position:relative;
+  z-index:2;
+}
+.card{
+  background:#fff;
+  border-radius:20px;
+  box-shadow:0 10px 34px rgba(59,31,58,.14);
+  padding:34px 30px;
+  margin-bottom:26px;
+  border-top:5px solid var(--sakura);
+}
+.card.group{border-top-color:var(--gold)}
+.card-tag{
+  display:inline-block;
+  background:var(--beige);
+  color:var(--plum);
+  font-weight:700;
+  font-size:.85rem;
+  padding:4px 14px;
+  border-radius:99px;
+  margin-bottom:14px;
+  letter-spacing:.03em;
+}
+.card h2{
+  font-family:'Frank Ruhl Libre',serif;
+  font-weight:700;
+  font-size:1.5rem;
+  color:var(--plum);
+  margin-bottom:10px;
+}
+.card p{margin-bottom:18px}
+
+.steps{list-style:none;margin:0 0 22px}
+.steps li{
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+  padding:9px 0;
+}
+.step-num{
+  flex:none;
+  width:30px;height:30px;
+  background:var(--plum);
+  color:var(--beige);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;
+  font-size:.95rem;
+  margin-top:2px;
+}
+.steps li span.txt strong{color:var(--plum)}
+
+.inline-link{
+  color:var(--sakura-deep);
+  font-weight:700;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+.inline-link:hover{color:var(--plum)}
+
+.btn{
+  display:block;
+  text-align:center;
+  text-decoration:none;
+  font-weight:700;
+  font-size:1.08rem;
+  padding:15px 20px;
+  border-radius:14px;
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.btn:active{transform:scale(.98)}
+.btn-fb{
+  background:var(--fb);
+  color:#fff;
+  box-shadow:0 6px 18px rgba(24,119,242,.35);
+}
+.btn-fb:hover{box-shadow:0 8px 22px rgba(24,119,242,.45)}
+.btn-plum{
+  background:var(--plum);
+  color:var(--beige);
+  box-shadow:0 6px 18px rgba(59,31,58,.3);
+}
+.btn-plum:hover{box-shadow:0 8px 22px rgba(59,31,58,.42)}
+
+/* sakura divider between cards */
+.sakura-div{
+  text-align:center;
+  color:var(--sakura-deep);
+  font-size:1.3rem;
+  letter-spacing:1.2em;
+  padding:2px 0 26px;
+  text-indent:1.2em;
+}
+
+/* ---------- THANKS ---------- */
+.thanks{
+  text-align:center;
+  max-width:560px;
+  margin:14px auto 0;
+  padding:0 24px;
+}
+.thanks p{
+  font-family:'Frank Ruhl Libre',serif;
+  font-size:1.25rem;
+  color:var(--plum);
+  font-weight:500;
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+  margin-top:52px;
+  background:var(--plum);
+  color:var(--beige);
+  text-align:center;
+  padding:44px 24px 36px;
+}
+footer .brand{
+  font-family:'Frank Ruhl Libre',serif;
+  font-weight:900;
+  font-size:1.35rem;
+  letter-spacing:.04em;
+  margin-bottom:6px;
+}
+footer .tagline{
+  color:var(--sakura);
+  font-size:.95rem;
+  margin-bottom:24px;
+}
+.contact{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:14px 30px;
+  font-size:1.02rem;
+}
+.contact a{
+  color:var(--beige);
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 14px;
+  border:1px solid rgba(245,240,232,.25);
+  border-radius:99px;
+  transition:background .15s ease;
+}
+.contact a:hover{background:rgba(245,240,232,.1)}
+footer .jp{
+  margin-top:26px;
+  font-size:.85rem;
+  letter-spacing:.35em;
+  color:rgba(232,165,179,.7);
+}
+
+@media (max-width:480px){
+  .card{padding:28px 22px}
+  .hero{padding:42px 20px 78px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="logo-wrap">
+    <img src="logo.png" alt="Yamato Travel" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'">
+    <span class="logo-fallback">YAMATO TRAVEL</span>
+  </div>
+  <div class="jp-accent">ありがとうございました</div>
+  <div class="jp-romaji">Arigatō Gozaimashita</div>
+  <h1>נהניתם ביפן?</h1>
+  <p class="sub">היה לנו כיף גדול ללוות אתכם בדרך ליפן ובתוכה. אם השירות עשה לכם טוב, המלצה קטנה שלכם היא <strong>הדרך הכי משמעותית</strong> לעזור לימאטו טרוול לגדול. זה לוקח דקה, ובשבילנו זה עולם ומלואו.</p>
+</section>
+<div class="wave">
+  <svg viewBox="0 0 1440 56" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,32 C240,64 480,0 720,16 C960,32 1200,64 1440,24 L1440,56 L0,56 Z" fill="#f5f0e8"/>
+  </svg>
+</div>
+
+<div class="cards">
+
+  <div class="card group">
+    <span class="card-tag">הכי עוזר לנו</span>
+    <h2>שיתוף בקבוצת "יפן - טיפים ועזרה למטיילים" ⛩️</h2>
+    <p>זו קבוצת פייסבוק גדולה של מטיילים ישראלים שמתכננים טיול ליפן. פוסט קצר על החוויה שלכם איתנו יכול לעזור למטיילים אחרים למצוא אותנו, בדיוק כמו שאתם מצאתם. חשוב רק דבר אחד: כדי שיוכלו להגיע אלינו, ציינו בסוף הפוסט את הקישור לדף שלנו <a class="inline-link" href="https://www.facebook.com/profile.php?id=61572471399430" target="_blank" rel="noopener">Yamato Travel</a> ואת מספר הוואטסאפ <strong dir="ltr">+81-90-7378-1376</strong>.</p>
+    <a class="btn btn-fb" href="https://www.facebook.com/groups/japanguideil/" target="_blank" rel="noopener">לקבוצה בפייסבוק</a>
+  </div>
+
+  <div class="sakura-div">🌸 🌸 🌸</div>
+
+  <div class="card">
+    <span class="card-tag">המלצה בדף שלנו</span>
+    <h2>ביקורת בדף הפייסבוק של ימאטו טרוול</h2>
+    <p>כך משאירים המלצה, בשלושה צעדים:</p>
+    <ol class="steps">
+      <li><span class="step-num">1</span><span class="txt">לוחצים על הכפתור למטה, הוא פותח ישירות את אזור הביקורות בדף שלנו</span></li>
+      <li><span class="step-num">2</span><span class="txt">אם אזור הביקורות לא נפתח, לוחצים על לשונית <strong>"ביקורות"</strong> (Reviews) מתחת לתמונת הדף</span></li>
+      <li><span class="step-num">3</span><span class="txt">בוחרים <strong>"כן"</strong> בשאלה "האם אתם ממליצים?" וכותבים כמה מילים מהלב</span></li>
+    </ol>
+    <a class="btn btn-plum" href="https://www.facebook.com/profile.php?id=61572471399430&sk=reviews" target="_blank" rel="noopener">לדף של Yamato Travel ולכתיבת ביקורת</a>
+  </div>
+
+</div>
+
+<div class="thanks">
+  <p>תודה מכל הלב. נתראה בטיול הבא ביפן 🇯🇵</p>
+</div>
+
+<footer>
+  <div class="brand">YAMATO TRAVEL</div>
+  <div class="tagline">תכנון מסלולים, הדרכה וליווי בטיולים ביפן</div>
+  <div class="contact">
+    <a href="https://yamato-travel.com" target="_blank" rel="noopener">🌐 yamato-travel.com</a>
+    <a href="https://wa.me/819073781376" target="_blank" rel="noopener">💬 WhatsApp +81-90-7378-1376</a>
+    <a href="mailto:info@yamato-travel.com">✉️ info@yamato-travel.com</a>
+  </div>
+  <div class="jp">またお会いしましょう · Mata Oaishimashō · נתראה שוב</div>
+</footer>
+
+</body>
+</html>
